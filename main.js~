@@ -1,0 +1,386 @@
+var body = document.body, html = document.documentElement;				
+var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+var width = Math.max( body.scrollWidth, body.offsetWidth, html.clientWidth, html.scrollWidth, html.offsetWidth );
+
+
+
+var svg = d3.select("body")
+				.append("svg")
+				.attr("width",width)
+				.attr("height",height).attr("id","svg");	
+				
+				
+				
+	
+	var pageImg = svg.append("svg:image").attr("x",20).attr("y",-70).attr("width",1800).attr("height",1000)
+		.attr("xlink:href","images/newHomepage.jpg").attr("id","home");
+		
+	svg.append("circle").attr("cx",165).attr("cy",120).attr("r",125).attr("fill","blue").style("opacity",0).on("click",function(){
+			window.location.reload(true);
+	});
+		
+		var gr = svg.append("g").attr("id","gr");
+		
+		
+		var rct = svg.append("rect").attr("x",95).attr("y",310).attr("width",250).attr("height",215).attr("fill","red").style("opacity",0);
+		
+		
+		var teamsTxt = gr.append("text").attr("x",340).attr("y",180).style("font-size","33px").text("Teams").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					window.location.reload(true);
+				});
+				
+		var fixResTxt = gr.append("text").attr("x",550).attr("y",180).style("font-size","33px").text("Fixtures & Results").on("mouseover",function () {
+			
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					svg.append("rect").attr("x",70).attr("y",260).attr("width",1800).attr("height",700).attr("fill","white");
+					fixturesRes();
+				});
+				
+		var confTxt = gr.append("text").attr("x",960).attr("y",180).style("font-size","33px").text("Conference").on("mouseover",function () {
+			
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					svg.append("rect").attr("x",70).attr("y",260).attr("width",1800).attr("height",700).attr("fill","white");
+				});
+				
+				
+		var ladderTxt = gr.append("text").attr("x",1260).attr("y",180).style("font-size","33px").text("Ladder").on("mouseover",function () {
+			
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					svg.append("rect").attr("x",70).attr("y",260).attr("width",1800).attr("height",700).attr("fill","white");
+				});
+				
+				
+				
+		
+	var thunderBirds = svg.append("rect").attr("x",95).attr("y",310).attr("width",250).attr("height",215).attr("fill","blue").style("opacity",0).on("click",function(){
+			thunderBTeam();
+			d3.transition().select("#svg").remove();	
+	});
+	
+	var vixens = svg.append("rect").attr("x",425).attr("y",310).attr("width",250).attr("height",215).attr("fill","blue").style("opacity",0).on("click",function(){
+			vixenTeam();
+			d3.transition().select("#svg").remove();	
+	});
+	
+	var newSW = svg.append("rect").attr("x",755).attr("y",310).attr("width",250).attr("height",215).attr("fill","blue").style("opacity",0).on("click",function(){
+			newSWTeam();
+			d3.transition().select("#svg").remove();	
+	});
+	
+	var firebirds = svg.append("rect").attr("x",1085).attr("y",310).attr("width",250).attr("height",215).attr("fill","blue").style("opacity",0).on("click",function(){
+			fireBTeam();
+			d3.transition().select("#svg").remove();	
+	});
+	
+	var westFever = svg.append("rect").attr("x",1415).attr("y",310).attr("width",250).attr("height",215).attr("fill","blue").style("opacity",0).on("click",function(){
+			westFeverTeam();
+			d3.transition().select("#svg").remove();	
+	});
+		
+		
+				
+				
+	
+	var tactix = svg.append("rect").attr("x",95).attr("y",600).attr("width",250).attr("height",215).attr("fill","blue").style("opacity",0).on("click",function(){
+			tactixTeam();
+			d3.transition().select("#svg").remove();	
+	});
+	
+	var pulse = svg.append("rect").attr("x",425).attr("y",600).attr("width",250).attr("height",215).attr("fill","blue").style("opacity",0).on("click",function(){
+			pulseTeam();
+			d3.transition().select("#svg").remove();	
+	});
+	
+	var mystics = svg.append("rect").attr("x",755).attr("y",600).attr("width",250).attr("height",215).attr("fill","blue").style("opacity",0).on("click",function(){
+			mysticsTeam();
+			d3.transition().select("#svg").remove();	
+	});
+	
+	var steel = svg.append("rect").attr("x",1085).attr("y",600).attr("width",250).attr("height",215).attr("fill","blue").style("opacity",0).on("click",function(){
+			steelTeam();
+			d3.transition().select("#svg").remove();	
+	});
+	
+	var magic = svg.append("rect").attr("x",1415).attr("y",600).attr("width",250).attr("height",215).attr("fill","blue").style("opacity",0).on("click",function(){
+			magicTeam();
+			d3.transition().select("#svg").remove();	
+	});
+	
+	
+function thunderBTeam() {
+	
+}
+
+function vixenTeam() {
+	
+}
+
+function newSWTeam() {
+	
+}
+
+function fireBTeam() {
+	
+}
+
+function westFeverTeam() {
+	
+}
+
+function tactixTeam() {
+	
+}
+
+function pulseTeam() {
+	
+}
+
+function mysticsTeam() {
+	
+}
+
+function steelTeam() {
+	
+}
+
+function magicTeam() {
+	
+}
+
+function fixturesRes() {
+	
+	var seasons = svg.append("text").attr("x",340).attr("y",280).style("font-size","33px").text("SEASON").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					
+				});
+				
+	var year13 = svg.append("text").attr("x",510).attr("y",280).style("font-size","33px").text("2013").attr("id","year13").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					d3.csv("csv/2008-Table1.csv", function (data) {
+		for (i = 0; i < data.length; i++) {
+			if (data[i].Time === "") console.log("BYE");
+		}
+		func();
+		
+		function func() {
+			svg.append("rect").attr("x",400).attr("y",300).attr("width",250).attr("height",215).attr("fill","green");
+		}	
+	});
+				});
+				
+	var year12 = svg.append("text").attr("x",610).attr("y",280).style("font-size","33px").text("2012").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					
+				});
+				
+	var year11 = svg.append("text").attr("x",710).attr("y",280).style("font-size","33px").text("2011").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					
+				});
+				
+	var year10 = svg.append("text").attr("x",810).attr("y",280).style("font-size","33px").text("2010").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					
+				});
+				
+	var year09 = svg.append("text").attr("x",910).attr("y",280).style("font-size","33px").text("2009").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					
+				});
+				
+	var year08 = svg.append("text").attr("x",1010).attr("y",280).style("font-size","33px").text("2008").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					
+				});
+				
+	var earlyS = svg.append("text").attr("x",340).attr("y",330).style("font-size","27px").text("Early-Season").attr("id","early").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+			svg.append("rect").attr("x",55).attr("y",405).attr("width",50).attr("height",400).attr("fill","white");				
+				
+			var first = svg.append("text").attr("x",60).attr("y",450).style("font-size","30px").text("1").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					
+				});
+				
+				var second = svg.append("text").attr("x",60).attr("y",500).style("font-size","30px").text("2").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					
+				});
+				
+				var third = svg.append("text").attr("x",60).attr("y",550).style("font-size","30px").text("3").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					
+				});
+				
+				var fourth = svg.append("text").attr("x",60).attr("y",600).style("font-size","30px").text("4").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					
+				});
+				
+				var fifth = svg.append("text").attr("x",60).attr("y",650).style("font-size","30px").text("5").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					
+				});
+				
+				var sixth = svg.append("text").attr("x",60).attr("y",700).style("font-size","30px").text("6").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					
+				});
+				
+				});
+				
+	var midS = svg.append("text").attr("x",600).attr("y",330).style("font-size","27px").text("Mid-Season").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+				svg.append("rect").attr("x",55).attr("y",405).attr("width",50).attr("height",400).attr("fill","white");				
+				
+					var seventh = svg.append("text").attr("x",60).attr("y",450).style("font-size","30px").text("7").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					
+				});
+				
+				var eighth = svg.append("text").attr("x",60).attr("y",500).style("font-size","30px").text("8").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					
+				});
+				
+				var ninth = svg.append("text").attr("x",60).attr("y",550).style("font-size","30px").text("9").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					
+				});
+				
+				var tenth = svg.append("text").attr("x",60).attr("y",600).style("font-size","30px").text("10").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					
+				});
+				
+				var eleventh = svg.append("text").attr("x",60).attr("y",650).style("font-size","30px").text("11").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					
+				});
+				
+				var twelth = svg.append("text").attr("x",60).attr("y",700).style("font-size","30px").text("12").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					
+				});
+				
+				});
+				
+	var endS = svg.append("text").attr("x",820).attr("y",330).style("font-size","27px").text("End of Regular Season").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+				svg.append("rect").attr("x",55).attr("y",405).attr("width",50).attr("height",400).attr("fill","white");				
+				
+					var f13 = svg.append("text").attr("x",60).attr("y",450).style("font-size","30px").text("13").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					
+				});
+				
+				var f14 = svg.append("text").attr("x",60).attr("y",500).style("font-size","30px").text("14").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					
+				});
+				});
+				
+	var round = svg.append("text").attr("x",30).attr("y",400).style("font-size","30px").text("Round").on("mouseover",function () {
+				
+			}).on("mouseout",function () {
+				
+			}).on("click", function () {
+					
+				});
+	
+	svg.select("#year13").on("click")();			
+	svg.select("#early").on("click")();
+}
+	
+
+	
+	
+
+				
+	
+				
+
+
+

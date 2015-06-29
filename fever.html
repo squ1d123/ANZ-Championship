@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title></title>
+</head>
+   
+
+
+
+<body>
+<script src="fever.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+  <script type="text/javascript" language="javascript" src="fever.js"></script>
+  <script src="Chart.min.js"></script>
+  <canvas id="doughnut" style="width: 300px; height: 300px;margin-top: -900px;margin-left: 800px;" height="199" width="199"></canvas>
+ <canvas id="doughnut2" style="width: 300px; height: 300px;margin-top: -900px;margin-left: 1150px;" height="199" width="199"></canvas>
+ <canvas id="doughnut3" style="width: 300px; height: 300px;margin-top: -900px;margin-left: 1500px;" height="199" width="199"></canvas>
+
+  <div id="chartContainer">
+  <script src="/lib/d3.v3.4.8.js"></script>
+  <script src="http://dimplejs.org/dist/dimple.v2.1.2.min.js"></script>
+  <script type="text/javascript">
+
+var c = document.getElementById('doughnut').getContext('2d');
+
+var data = [
+    {
+        value: 4,
+        color:"#F7464A",
+        highlight: "#FF5A5E",
+        label: "Won"
+    },
+    {
+        value: 3,
+        color: "#46BFBD",
+        highlight: "#5AD3D1",
+        label: "Lost"
+    },
+ 
+];
+
+var options = {};
+
+var myDoughnutChart = new Chart(c).Doughnut(data,options);
+
+
+var c = document.getElementById('doughnut2').getContext('2d');
+
+var data = [
+    {
+        value: 1,
+        color:"#F7464A",
+        highlight: "#FF5A5E",
+        label: "Won"
+    },
+    {
+        value: 5,
+        color: "#46BFBD",
+        highlight: "#5AD3D1",
+        label: "Lost"
+    },
+ 
+];
+
+var options = {};
+
+var myDoughnutChart = new Chart(c).Doughnut(data,options);
+
+
+
+var c = document.getElementById('doughnut3').getContext('2d');
+
+var data = [
+    {
+        value: 5,
+        color:"#F7464A",
+        highlight: "#FF5A5E",
+        label: "Won"
+    },
+    {
+        value: 8,
+        color: "#46BFBD",
+        highlight: "#5AD3D1",
+        label: "Lost"
+    },
+ 
+];
+
+var options = {};
+
+var myDoughnutChart = new Chart(c).Doughnut(data,options);
+
+  </script>
+</div>
+</body>
+
+</html> 
+
